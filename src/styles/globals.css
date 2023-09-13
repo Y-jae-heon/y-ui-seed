@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    --ring: 217.2 32.6% 17.5%;
+  }
+
+  @keyframes defaultfadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .default-fade-in {
+    animation: defaultfadein 0.3s ease-out forwards 0.2s;
+  }
+
+  .main-content-with-padding-top {
+    padding-top: 117px;
+  }
+
+  .swiper-type-e {
+    padding: 40px !important;
+  }
+
+  .swiper-type-a .swiper-button-prev,
+  .custome-swiper .swiper-button-prev {
+    background: url("/assets/svg/icon-arrow-right.svg") no-repeat center
+      center/contain;
+    width: 60px;
+    height: 60px;
+    left: 15%;
+    transform: rotate(180deg);
+    cursor: pointer;
+  }
+  .swiper-type-a .swiper-button-prev {
+    left: 20px;
+  }
+
+  .custome-swiper .swiper-slide-shadow-left {
+    opacity: 0 !important;
+  }
+
+  .custome-swiper .swiper-slide-shadow-right {
+    opacity: 0 !important;
+  }
+
+  .swiper-type-a .swiper-button-next,
+  .custome-swiper .swiper-button-next {
+    background: url("/assets/svg/icon-arrow-right.svg") no-repeat center
+      center/contain;
+    width: 60px;
+    height: 60px;
+    right: 15%;
+    cursor: pointer;
+  }
+  .swiper-type-a .swiper-button-next {
+    right: 20px;
+  }
+
+  .swiper-type-a .swiper-button-next::after,
+  .swiper-type-a .swiper-button-prev::after,
+  .custome-swiper .swiper-button-next::after,
+  .custome-swiper .swiper-button-prev::after {
+    display: none;
+  }
+
+  .custome-swiper.type-b .swiper-button-prev {
+    left: 2.5%;
+  }
+  .custome-swiper.type-b .swiper-button-next {
+    right: 2.5%;
+  }
+
+  .mySwiper.type-d {
+    padding-bottom: 60px;
+  }
+  .mySwiper.type-d .swiper-pagination-bullet {
+    width: 36px;
+    height: 4px;
+    border-radius: 0;
+    background: #18584c;
+  }
+
+  .Toastify__toast {
+    border-radius: 100px;
+  }
+
+  [data-aos="zoom-out"] {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 1249px) {
+    .swiper-type-a .swiper-button-prev,
+    .swiper-type-a .swiper-button-next,
+    .custome-swiper .swiper-button-prev,
+    .custome-swiper .swiper-button-next {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .swiper-type-a .swiper-button-prev {
+      left: 20px;
+    }
+    .swiper-type-a .swiper-button-next {
+      right: 20px;
+    }
+    .swiper-type-a .swiper-button-prev,
+    .swiper-type-a .swiper-button-next,
+    .custome-swiper .swiper-button-prev,
+    .custome-swiper .swiper-button-next {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .swiper-type-a .swiper-button-prev {
+      left: 16px;
+    }
+    .swiper-type-a .swiper-button-next {
+      right: 16px;
+    }
+    .custome-swiper .swiper-button-prev,
+    .custome-swiper .swiper-button-next {
+      display: none;
+    }
+    .swiper-type-a .swiper-button-prev,
+    .swiper-type-a .swiper-button-next {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
